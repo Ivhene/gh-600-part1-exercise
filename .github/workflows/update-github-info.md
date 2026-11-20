@@ -22,6 +22,7 @@ network:
     - defaults
     - github.blog
     - github.com
+    - awesome-copilot.github.com
 
 safe-outputs:
   create-pull-request:
@@ -47,16 +48,18 @@ site content with the latest noteworthy GitHub news.
    https://github.blog/latest/
 3. **Fetch the latest GitHub Changelog entries** with web-fetch from
    https://github.blog/changelog/
-4. **Update `site/content/github-info.md`**:
+4. **Fetch the latest Awesome Copilot workflows** with web-fetch from
+   https://awesome-copilot.github.com/workflows/
+5. **Update `site/content/github-info.md`**:
    - Keep the existing structure and editorial angle of the page.
    - Refresh the "Recent GitHub Blog and Changelog stories worth watching"
      material with a short, practical summary of the most relevant recent
      posts and changelog entries for developers learning GitHub.
-   - Mention the source (GitHub Blog or GitHub Changelog) for every item you
-     add, as Mona's notes require.
+   - Mention the source (GitHub Blog, GitHub Changelog, or Awesome Copilot)
+     for every item you add, as Mona's notes require.
    - Keep summaries short and practical; prefer updates that help developers
      learn GitHub faster.
-5. **Open a pull request** with your changes so Mona can review them before
+6. **Open a pull request** with your changes so Mona can review them before
    anything goes live. Give the pull request a clear title and a body that
    lists what changed and which sources each update came from.
 
@@ -65,6 +68,6 @@ site content with the latest noteworthy GitHub news.
 - Only modify `site/content/github-info.md`. Do not touch any other file.
 - Never write directly to the default branch; all changes go through the
   pull request safe output.
-- If the blog and changelog contain nothing new or relevant since the current
+- If the sources contain nothing new or relevant since the current
   page content, make no edits and call `noop` with a short explanation
   instead of opening a pull request.
