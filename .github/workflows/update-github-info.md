@@ -15,7 +15,7 @@ engine:
 
 tools:
   edit:
-  web-fetch:
+  bash: true
 
 network:
   allowed:
@@ -44,12 +44,12 @@ site content with the latest noteworthy GitHub news.
 
 1. **Read Mona's editorial notes** in `notes/mona-notes.md` at the root of this
    repository and follow them when drafting any content.
-2. **Fetch the latest GitHub Blog posts** with web-fetch from
-   https://github.blog/latest/
-3. **Fetch the latest GitHub Changelog entries** with web-fetch from
-   https://github.blog/changelog/
-4. **Fetch the latest Awesome Copilot workflows** with web-fetch from
-   https://awesome-copilot.github.com/workflows/
+2. **Fetch the latest GitHub Blog posts** by running
+   `curl -fsSL https://github.blog/latest/` in the shell.
+3. **Fetch the latest GitHub Changelog entries** by running
+   `curl -fsSL https://github.blog/changelog/` in the shell.
+4. **Fetch the latest Awesome Copilot workflows** by running
+   `curl -fsSL https://awesome-copilot.github.com/workflows/` in the shell.
 5. **Update `site/content/github-info.md`**:
    - Keep the existing structure and editorial angle of the page.
    - Refresh the "Recent GitHub Blog and Changelog stories worth watching"
